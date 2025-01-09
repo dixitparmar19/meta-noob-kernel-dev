@@ -1,0 +1,55 @@
+This README file contains information on the contents of the meta-kernel-dev layer.
+
+Please see the corresponding sections below for details.
+
+Thought Process
+===============
+When I thought I should start learning linux device driver I started reading LDD3.
+Learning something like this without doing hands-on does not make sense.
+Now doing that stuff on your workstation(only one) is not a good idea and also
+workstation(Ubuntu kind of linux based) does not allow you to experiment with the
+hardware too to some extent.
+So why not use a popular embedded linux board as TRUE development board for
+software development, in our case device-driver development.
+We setup basic Yocto build which can compile Linux image for Raspberry Pi board.
+But it does not have all the stuff we need to start developing driver on the target natively.
+Here we are, with our custom layer which add all the required tools to build basic
+device driver on the target(Raspberry Pi) itself.
+With this we no need to:
+Implement -> Cross-Compile -> Generate Images -> Flash(very tedius) -> Stare at console -> Repeat.
+Enjoy!
+
+Dependencies
+============
+
+  URI: meta-raspberrypi
+  branch: Latest
+
+Patches
+=======
+
+Please submit any patches against the meta-kernel-dev layer by creating issue and PR to this github repo.
+
+Maintainer: dixitparmar19
+
+Table of Contents
+=================
+
+  I. Adding the meta-kernel-dev layer to your build
+ II. How to build the image
+
+
+I. Adding the meta-kernel-dev layer to your build
+=================================================
+
+Run 'bitbake-layers add-layer meta-kernel-dev'
+
+II. How to build the image
+=========================
+	cd <your workspace>/poky
+	Clone this Layer:
+		
+	Build Commands:
+		export TEMPLATECONF="$(pwd)/meta-kernel-dev/conf/templates/sample"
+		source oe-init-build-env build-rpi
+

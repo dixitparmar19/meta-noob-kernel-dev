@@ -1,0 +1,1 @@
+This is the default build configuration for the RPi kernel development image distro.
