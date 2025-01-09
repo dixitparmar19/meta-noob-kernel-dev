@@ -48,8 +48,9 @@ II. How to build the image
 =========================
 	cd <your workspace>/poky
 	Clone this Layer:
-		
+		git clone https://github.com/dixitparmar19/meta-kernel-dev.git
 	Build Commands:
 		export TEMPLATECONF="$(pwd)/meta-kernel-dev/conf/templates/sample"
 		source oe-init-build-env build-rpi
+		bitbake rpi-kernel-dev-image
 
