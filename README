@@ -18,7 +18,9 @@ device driver on the target(Raspberry Pi) itself.
 With this we no need to:
 Implement -> Cross-Compile -> Generate Images -> Flash(very tedious) -> Stare at console -> Repeat.
 
-You can simply compile the image once, you're ready to tinker on the Raspbery Pi board.
+You can build and flash this image once, you're ready to experimenting Linux kernel device driver
+on the RaspbberyPi board for the RaspberryPi board.
+
 Enjoy!
 
 Dependencies
