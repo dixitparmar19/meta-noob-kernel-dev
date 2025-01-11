@@ -53,6 +53,8 @@ II. How to build the image
 	cd <your workspace>/poky
 	Clone this Layer:
 		git clone git@github.com:dixitparmar19/meta-noob-kernel-dev.git
+		OR
+		git clone https://github.com/dixitparmar19/meta-noob-kernel-dev.git
 	Build Commands:
 		export TEMPLATECONF="$(pwd)/meta-noob-kernel-dev/conf/templates/sample"
 		source oe-init-build-env build-rpi
