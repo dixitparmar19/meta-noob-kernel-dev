@@ -17,6 +17,8 @@ Here we are, with our custom layer which add all the required tools to build a b
 device driver on the target(Raspberry Pi) itself.
 With this we no need to:
 Implement -> Cross-Compile -> Generate Images -> Flash(very tedious) -> Stare at console -> Repeat.
+
+You can simply compile the image once, you're ready to tinker on the Raspbery Pi board.
 Enjoy!
 
 Dependencies
