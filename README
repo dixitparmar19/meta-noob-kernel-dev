@@ -28,18 +28,18 @@ Dependencies
 Patches
 =======
 
-Please submit any patches against the meta-kernel-dev layer by creating an issue and PR to this GitHub repo.
+Please submit any patches against the meta-noob-kernel-dev layer by creating an issue and PR to this GitHub repo.
 
 Maintainer: dixitparmar19
 
 Table of Contents
 =================
 
-  I. Adding the meta-kernel-dev layer to your build
+  I. Adding the meta-noob-kernel-dev layer to your build
  II. How to build the image
 
 
-I. Adding the meta-kernel-dev layer to your build
+I. Adding the meta-noob-kernel-dev layer to your build
 =================================================
 
 Run 'bitbake-layers add-layer meta-noob-kernel-dev'
