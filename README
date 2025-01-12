@@ -41,15 +41,16 @@ Table of Contents
 
   I. Adding the meta-noob-kernel-dev layer to your build
  II. How to build the image
+III. How to flash the .wic image
 
 
 I. Adding the meta-noob-kernel-dev layer to your build
-=================================================
+======================================================
 
 Run 'bitbake-layers add-layer meta-noob-kernel-dev'
 
 II. How to build the image
-=========================
+==========================
 	cd <your workspace>/poky
 	Clone this Layer:
 		git clone git@github.com:dixitparmar19/meta-noob-kernel-dev.git
@@ -60,3 +61,14 @@ II. How to build the image
 		source oe-init-build-env build-rpi
 		bitbake rpi-kernel-dev-image
 
+III. How to flash the wic image
+===============================
+	Unzip the generated bzip2.wic file:
+		bzip2 -d -f rpi-kernel-dev-image-raspberrypi4.rootfs.wic.bz2
+
+	Format the SD-Card:
+		I use gparted utility and device name is /dev/sdb
+		Note: remeber this block device name. Use it in the dd command below
+
+	Copy the image to SD card using dd:
+		sudo dd if=rpi-kernel-dev-image-raspberrypi4.rootfs.wic of=/dev/sdb bs=4M status=progress
