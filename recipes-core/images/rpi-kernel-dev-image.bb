@@ -29,5 +29,6 @@ IMAGE_INSTALL:append = " \
     cmake \
     git \
     perf \
+    openssh \
 "
 
