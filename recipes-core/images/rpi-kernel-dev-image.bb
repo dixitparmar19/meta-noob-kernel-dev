@@ -30,5 +30,7 @@ IMAGE_INSTALL:append = " \
     git \
     perf \
     openssh \
+    strace \
+    lsof \
 "
 
