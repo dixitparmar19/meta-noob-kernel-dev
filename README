@@ -63,3 +63,10 @@ III. How to flash the wic image
 
 	Copy the image to SD card using dd:
 		sudo dd if=rpi-kernel-dev-image-raspberrypi4.rootfs.wic of=/dev/sdb bs=4M status=progress
+
+IV. Making RaspberryPi ready to compile the kernel modules(Most important)
+==========================================================
+	Once your raspberryPi boots with the image we just created.
+	Go to <rpi console> and execute below commands:
+	cd /usr/src/kernel
+	make scripts prepare
